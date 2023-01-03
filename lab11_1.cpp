@@ -6,31 +6,24 @@ int main(){
 	int count[5] = {a,b,c,d,f};
 	int x = 0;
 	int t = 0;
-	char grade; //Declare array count for counting A,B,C,D,F and initialize all element = 0
+	char grade;
 	cout << "Please input grade of each student (A-F) or input 0 to exit.\n";
 	do{
 		cout << "Student [" << x + 1 << "]: ";
-		cin >> grade; //The loop must be terminated when grade = '0'
-		if(grade == 'A'){ // if grade is A
-			//Do something
+		cin >> grade;
+		if(grade == 'A'){ 
 			count[0] += 1;
 			t += 1;
-		}else if(grade == 'B'){// if grade is B
-			//Do something
+		}else if(grade == 'B'){
 			count[1] += 1;
 			t += 1;
-		//and so on ... for grade = C, D, F	
-		}else if(grade == 'C'){ // grade is wrong input
-			//Do something
+		}else if(grade == 'C'){
 			count[2] += 1;
 			t += 1;
 		}else if(grade == 'D'){
-			/* code */
 			count[3] += 1;
 			t += 1;
-		}else if (grade == 'F')
-		{
-			/* code */
+		}else if (grade == 'F'){
 			count[4] += 1;
 			t += 1;
 		}
@@ -38,24 +31,22 @@ int main(){
 		{
 			if (grade != '0')
 			{
-				/* code */
-				cout << "Wrong input. Please input agian.\n";
+				cout << "Wrong input. Please input again.\n";
 				continue;
 			}
 			else
 				break;
 		}
 		x++;
-	}while(grade != '0');
+	}while(true);
 	
 	
-	cout << "In total ? students.";
+	cout << "In total "<< t << " students.\n";
 	cout << "A = " << count[0] <<", ";
 	cout << "B = " << count[1] <<", ";
 	cout << "C = " << count[2] <<", ";
 	cout << "D = " << count[3] <<", ";
 	cout << "F = " << count[4] <<" ";	
-	//	and so on ... for grade = C, D, F	
 	
 	return 0;
 }
