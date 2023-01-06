@@ -49,4 +49,5 @@ int main(){
 	cout << "F = " << count[4] <<" ";	
 	
 	return 0;
+	
 }
